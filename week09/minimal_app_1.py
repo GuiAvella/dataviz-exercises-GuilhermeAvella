@@ -16,3 +16,5 @@ df.columns = ['Country','Region','Score','GDP','Social_Support',
 
 st.title("World Happiness Dashboard")
 st.write(f"Data loaded: {len(df)} countries")
+
+
