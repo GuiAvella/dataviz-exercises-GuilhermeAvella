@@ -1,7 +1,4 @@
 # utils.py — shared by every page
-import os
-import sys
-
 import pandas as pd
 import streamlit as st
 
@@ -12,7 +9,6 @@ import streamlit as st
 # ─────────────────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    #path = Path(__file__).parent.parent / 'data' / "airbnb_london.csv"
     df = pd.read_csv('../data/airbnb_london.csv')
     p95 = df['price'].quantile(0.95)
     return df[df['price'] <= p95].copy(), p95   # .copy() → no SettingWithCopyWarning
