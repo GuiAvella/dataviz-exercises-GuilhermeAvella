@@ -5,10 +5,11 @@ import datetime
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from utils import load_data, sidebar_filters
+os.chdir(os.path.dirname(os.path.dirname(__file__)))
 
 df, p95 = load_data()
 filtered = sidebar_filters(df, p95)  # shared sidebar — same filters on every page
-
+#df = pd.read_csv(path) 
 # ─────────────────────────────────────────────────────────────────────────────
 # question title + 4 KPIs — BBD 5-second test: the metrics alone
 # tell the story (price level, delta vs market, where it's cheap)
